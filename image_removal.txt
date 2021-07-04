@@ -1,0 +1,7 @@
+# this uses python 3.7 version 
+
+using imagehash we will try to identify the hash of the particular image and remove it
+
+we can have the as many directories as we want and it will try to remove the duplicate images 
+
+This will not work if the duplicate image is edited or similar.
