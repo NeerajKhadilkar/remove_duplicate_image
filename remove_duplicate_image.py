@@ -5,10 +5,11 @@ import imagehash
 import os
 
 
-reference_fold = r"C:\Users\Neeraj\Downloads\Porn_Data\NEW_MERGED_DATA"
+reference_fold = r"C:\Users\Neeraj\Desktop\test"
 
 def remove_images_from_dir():
 
+    dico={}
 
     # add as many directories here in list you want
     reference_directory=[reference_fold]
@@ -36,12 +37,15 @@ def remove_images_from_dir():
 
     result = {}
 
-    for val in dico:
-        if dico[val] in result:
-            result[dico[val]].append(val)
-        else:
-            result[dico[val]] = [val]
+    for key, value in dico.items():
 
+        if value not in result:
+            result[value] = [key]
+        else:
+            result[value].append(key)
+
+
+    print("final_dictionary", result)
 
     for key,val in result.items():
         if len(val)>1:
